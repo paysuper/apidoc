@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/spaceavocado/apidoc/extract"
+	"github.com/snezhana-dorogova/apidoc/extract"
 )
 
 // ErrParsing is soft error not causing the failure

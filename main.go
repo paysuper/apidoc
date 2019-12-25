@@ -9,8 +9,8 @@ package main
 
 import (
 	log "github.com/sirupsen/logrus"
-	"github.com/spaceavocado/apidoc/cmd"
-	"github.com/spaceavocado/apidoc/misc"
+	"github.com/snezhana-dorogova/apidoc/cmd"
+	"github.com/snezhana-dorogova/apidoc/misc"
 )
 
 func main() {

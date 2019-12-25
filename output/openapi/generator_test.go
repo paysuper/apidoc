@@ -9,7 +9,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 	"github.com/sirupsen/logrus/hooks/test"
-	"github.com/spaceavocado/apidoc/token"
+	"github.com/snezhana-dorogova/apidoc/token"
 )
 
 func TestGenerate(t *testing.T) {

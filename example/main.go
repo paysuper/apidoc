@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/spaceavocado/apidoc/example/handler/person"
+	"github.com/snezhana-dorogova/apidoc/example/handler/person"
 )
 
 // @title Example API

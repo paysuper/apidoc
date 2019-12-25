@@ -10,9 +10,9 @@ import (
 	"strings"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/spaceavocado/apidoc/misc"
-	"github.com/spaceavocado/apidoc/output"
-	"github.com/spaceavocado/apidoc/token"
+	"github.com/snezhana-dorogova/apidoc/misc"
+	"github.com/snezhana-dorogova/apidoc/output"
+	"github.com/snezhana-dorogova/apidoc/token"
 )
 
 type generator struct {

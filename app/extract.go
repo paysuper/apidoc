@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/spaceavocado/apidoc/extract"
+	"github.com/snezhana-dorogova/apidoc/extract"
 )
 
 // ExtractResult of the documentation extraction

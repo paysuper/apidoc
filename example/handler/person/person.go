@@ -5,10 +5,10 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/spaceavocado/apidoc/example/request"
-	"github.com/spaceavocado/apidoc/example/response"
+	"github.com/snezhana-dorogova/apidoc/example/request"
+	"github.com/snezhana-dorogova/apidoc/example/response"
 	// Common respose, structs referenced in the API documentation
-	_ "github.com/spaceavocado/apidoc/example/common"
+	_ "github.com/snezhana-dorogova/apidoc/example/common"
 )
 
 // Person response model

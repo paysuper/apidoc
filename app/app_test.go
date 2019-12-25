@@ -10,8 +10,8 @@ import (
 
 	log "github.com/sirupsen/logrus"
 	"github.com/sirupsen/logrus/hooks/test"
-	"github.com/spaceavocado/apidoc/extract"
-	"github.com/spaceavocado/apidoc/token"
+	"github.com/snezhana-dorogova/apidoc/extract"
+	"github.com/snezhana-dorogova/apidoc/token"
 )
 
 type errorResolver struct{}

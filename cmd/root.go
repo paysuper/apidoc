@@ -4,7 +4,7 @@ package cmd
 
 import (
 	log "github.com/sirupsen/logrus"
-	"github.com/spaceavocado/apidoc/app"
+	"github.com/snezhana-dorogova/apidoc/app"
 	"github.com/spf13/cobra"
 )
 
