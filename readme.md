@@ -542,6 +542,7 @@ Available Commands:
   version     Show the APIDoc version
 
 Flags:
+  -d, --dir string         Vendor directory path (default "./")
   -e, --endpoints string   Root endpoints folder (default "./")
   -h, --help               Help for this command
   -m, --main string        Main API documentation file (default "main.go")
