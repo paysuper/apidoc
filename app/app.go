@@ -76,7 +76,7 @@ func New(c Configuration) App {
 		conf:        &c,
 		extractor:   extract.NewExtractor(c.Verbose),
 		tokenParser: token.NewParser(c.Verbose),
-		refResolver: reference.NewResolver(c.Verbose),
+		refResolver: reference.NewResolver(c.Verbose, c.DirPath),
 		generator:   openapi.NewGenerator(c.Verbose),
 	}
 }
