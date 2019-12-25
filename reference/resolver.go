@@ -511,10 +511,10 @@ func (r *resolver) ParseFile(pkg, file string) error {
 }
 
 // NewResolver instance
-func NewResolver(verbose bool) Resolver {
+func (a *App) NewResolver(verbose bool) Resolver {
 	return &resolver{
 		verbose:      verbose,
-		gopath:       filepath.Join(os.Getenv("GOPATH"), "pkg\\mod"),
+		gopath:       filepath.Join(a.conf.DirPath, "vendor"),
 		builtinTypes: []string{"bool", "string", "int", "int8", "int16", "int32", "int64", "uint", "uint8", "uint16", "uint32", "uint64", "uintptr", "byte", "rune", "float32", "float64", "complex64", "complex128", "object"},
 		packages:     make(map[string]map[string]resolvedFile, 0),
 		types:        make(map[string][]string, 0),
