@@ -154,9 +154,21 @@ func (r *resolver) Resolve(endpoints []extract.Block) error {
 		}
 
 		// Updated the lines with the resolved enriched lines
-		endpoints[i].Lines = resolved
+		endpoints[i].Lines = unique(resolved)
 	}
 	return nil
+}
+
+func unique(inputSlice []string) []string {
+	keys := make(map[string]bool)
+	res := []string{}
+	for _, entry := range inputSlice {
+		if _, value := keys[entry]; !value {
+			keys[entry] = true
+			res = append(res, entry)
+		}
+	}
+	return res
 }
 
 // HasExpectedPrefix returns the detected
