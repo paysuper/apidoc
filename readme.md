@@ -481,7 +481,7 @@ An endpoint, with the same URL could be declared separately with different metho
 // @param id path {int} true User ID
 // @produce text
 // @success 200 {string} OK
-// @router /user/{id} [post]
+// @router /user/{id} [get]
 
 // ...
 
