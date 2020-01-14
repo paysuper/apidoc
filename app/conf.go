@@ -2,6 +2,8 @@ package app
 
 // Configuration of the app
 type Configuration struct {
+	// Project directory
+	DirPath string
 	// Main documentation file
 	MainFile string
 	// Endpoints root folder

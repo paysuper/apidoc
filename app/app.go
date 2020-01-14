@@ -5,11 +5,11 @@ import (
 	"path/filepath"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/spaceavocado/apidoc/extract"
-	"github.com/spaceavocado/apidoc/output"
-	"github.com/spaceavocado/apidoc/output/openapi"
-	"github.com/spaceavocado/apidoc/reference"
-	"github.com/spaceavocado/apidoc/token"
+	"github.com/snezhana-dorogova/apidoc/extract"
+	"github.com/snezhana-dorogova/apidoc/output"
+	"github.com/snezhana-dorogova/apidoc/output/openapi"
+	"github.com/snezhana-dorogova/apidoc/reference"
+	"github.com/snezhana-dorogova/apidoc/token"
 )
 
 const (
@@ -76,7 +76,7 @@ func New(c Configuration) App {
 		conf:        &c,
 		extractor:   extract.NewExtractor(c.Verbose),
 		tokenParser: token.NewParser(c.Verbose),
-		refResolver: reference.NewResolver(c.Verbose),
+		refResolver: reference.NewResolver(c.Verbose, c.DirPath),
 		generator:   openapi.NewGenerator(c.Verbose),
 	}
 }

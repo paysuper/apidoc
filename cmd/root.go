@@ -4,7 +4,7 @@ package cmd
 
 import (
 	log "github.com/sirupsen/logrus"
-	"github.com/spaceavocado/apidoc/app"
+	"github.com/snezhana-dorogova/apidoc/app"
 	"github.com/spf13/cobra"
 )
 
@@ -15,6 +15,7 @@ func RootCmd() *cobra.Command {
 		Long:  "API Documentation Generator",
 		Run: func(c *cobra.Command, args []string) {
 			log.Infof("%s (%s)", c.Long, app.Version)
+			dirPath, err := c.PersistentFlags().GetString("dir")
 			mainFile, err := c.PersistentFlags().GetString("main")
 			endsRoot, err := c.PersistentFlags().GetString("endpoints")
 			output, err := c.PersistentFlags().GetString("output")
@@ -25,6 +26,7 @@ func RootCmd() *cobra.Command {
 			}
 
 			app := app.New(app.Configuration{
+				DirPath:  dirPath,
 				MainFile: mainFile,
 				EndsRoot: endsRoot,
 				Output:   output,
@@ -35,6 +37,7 @@ func RootCmd() *cobra.Command {
 	}
 
 	// Flags
+	rootCmd.PersistentFlags().StringP("dir", "d", "./", "")
 	rootCmd.PersistentFlags().StringP("main", "m", "main.go", "Main API documentation file")
 	rootCmd.PersistentFlags().StringP("endpoints", "e", "./", "Root endpoints folder")
 	rootCmd.PersistentFlags().StringP("output", "o", "docs/api", "Documentation output folder")

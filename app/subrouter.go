@@ -3,7 +3,7 @@ package app
 import (
 	"errors"
 
-	"github.com/spaceavocado/apidoc/token"
+	"github.com/snezhana-dorogova/apidoc/token"
 )
 
 type subrouter struct {

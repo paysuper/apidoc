@@ -12,7 +12,7 @@ import (
 	"strings"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/spaceavocado/apidoc/extract"
+	"github.com/snezhana-dorogova/apidoc/extract"
 )
 
 // Resolver of references
@@ -154,9 +154,21 @@ func (r *resolver) Resolve(endpoints []extract.Block) error {
 		}
 
 		// Updated the lines with the resolved enriched lines
-		endpoints[i].Lines = resolved
+		endpoints[i].Lines = unique(resolved)
 	}
 	return nil
+}
+
+func unique(inputSlice []string) []string {
+	keys := make(map[string]bool)
+	res := []string{}
+	for _, entry := range inputSlice {
+		if _, value := keys[entry]; !value {
+			keys[entry] = true
+			res = append(res, entry)
+		}
+	}
+	return res
 }
 
 // HasExpectedPrefix returns the detected
@@ -511,10 +523,10 @@ func (r *resolver) ParseFile(pkg, file string) error {
 }
 
 // NewResolver instance
-func NewResolver(verbose bool) Resolver {
+func NewResolver(verbose bool, dir string) Resolver {
 	return &resolver{
 		verbose:      verbose,
-		gopath:       filepath.Join(os.Getenv("GOPATH"), "src"),
+		gopath:       filepath.Join(dir, "vendor"),
 		builtinTypes: []string{"bool", "string", "int", "int8", "int16", "int32", "int64", "uint", "uint8", "uint16", "uint32", "uint64", "uintptr", "byte", "rune", "float32", "float64", "complex64", "complex128", "object"},
 		packages:     make(map[string]map[string]resolvedFile, 0),
 		types:        make(map[string][]string, 0),

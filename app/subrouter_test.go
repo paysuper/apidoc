@@ -3,7 +3,7 @@ package app
 import (
 	"testing"
 
-	"github.com/spaceavocado/apidoc/token"
+	"github.com/snezhana-dorogova/apidoc/token"
 )
 
 func TestResolveSubrouters(t *testing.T) {

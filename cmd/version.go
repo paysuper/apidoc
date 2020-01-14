@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spaceavocado/apidoc/app"
+	"github.com/snezhana-dorogova/apidoc/app"
 	"github.com/spf13/cobra"
 )
 

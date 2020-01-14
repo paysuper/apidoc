@@ -8,7 +8,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 	"github.com/sirupsen/logrus/hooks/test"
-	"github.com/spaceavocado/apidoc/extract"
+	"github.com/snezhana-dorogova/apidoc/extract"
 )
 
 func TestParse(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/spaceavocado/apidoc/extract"
+	"github.com/snezhana-dorogova/apidoc/extract"
 )
 
 type mockExtractor struct {

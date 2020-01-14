@@ -2,7 +2,7 @@
 // from the tokenized outcome.
 package output
 
-import "github.com/spaceavocado/apidoc/token"
+import "github.com/snezhana-dorogova/apidoc/token"
 
 // Generator of the documentation
 type Generator interface {
